@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N&M Wedding Registry</title>
+    <link rel="stylesheet" href="../css/wedding_registry.css">
+</head>
+<body>
+    <header>
+        <h1>Wedding Registry</h1>
+    </header>
+    <div class="container">  
+        <div class="textbox" id ="textbox">
+            <p>Click Here</p>
+        </div>
+        <p id="instruction">View some of our favourites!</p> 
+        <div class="hidden" id="giftDetailsBody" >
+            <div id="giftDetails">
+              <div class="wrapper">
+                    <div class="banner-image" id="bannerImage">
+                        <a id="itemLink" href="https://maps.app.goo.gl/CfdJvTUDtaB5PzWm9" class="overlay-link" target="_blank"></a>
+                    </div>
+                    <a id="itemLinkName" href="https://maps.app.goo.gl/CfdJvTUDtaB5PzWm9" class="name-link" target="_blank"><h1 id="itemName"></h1><a>
+                    <p id="itemPrice" class="rupee-symbol">1000<p>
+                </div>
+                <div class="button-wrapper"> 
+                    <button class="btn outline" id="chooseAnotherButton">Next</button>
+                    <button class="btn fill" id="selectButton">Select Gift</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal hidden">
+        <div class="modal-content">
+            <p>Are you sure you want to select this gift?</p>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+    </div>
+
+    <div id="nameModal" class="modal hidden">
+        <div class="modal-content">
+            <p>Please enter your name(s) so we know you are human</p>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button id="confirmNameButton">Confirm</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+    </div>
+    <div id="thankYouModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 class="thankyou">Thank you</h2>
+            <h3 class="loveit">We love it &#9829<h3>
+            <button id="closeThankYouButton">Close</button>
+        </div>
+    </div>
+    <script type= "module" src="../js/wedding_registry.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@font-face {
+    font-family: 'Lulo Clean Outline Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Yellow Design Studio - Lulo Clean Outline Bold.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Evafiya';
+    src: url('../fonts/f24q125-evafiya-evafiya-bold-700.ttf') format('truetype'),
+         url('../fonts/f24q125-evafiya-evafiya-regular-400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AngellaWhite';
+    src: url('../fonts/AngellaWhitePersonalUseFont-ywA8e.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #424769;
+}
+
+
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80vw;
+}
+
+.header-text h1{
+    font-size: 3em;
+    margin-top: 5vh;
+    font-family: 'Lulo Clean Outline Bold';
+    color: #ffffcc;
+    text-shadow: 0 0 20px black;  
+    text-shadow: 0 0 10px rgba(202, 0, 225, 0.86), 0 0 20px rgba(202, 0, 225, 0.86), 0 0 30px rgba(202, 0, 225, 0.86); /* Add multiple shadows with different blur radii */
+
+}
+
+.header-p1{
+    margin-top: 10vh;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-family: 'Evafiya';
+    color: #ffffcc;
+}
+
+.header-p2{
+    margin-top: 47vh;
+    font-family: Cormorant Garamond, sans-serif;
+    font-size: 2em;
+    color: #ffffcc;
+}
+
+.main-content {
+    /* background-color: #424769; */
+    background-image: url(../images/background/4.png);
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    height: 100vh; 
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        background-image: url(../images/background/3.png);
+        background-size: auto 100%;
+        background-position: left center;
+    }
+}
+
+#carouselExampleIndicators {
+    width: 80vw;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+}
+
+/* Fix this part */
+.carousel-item img{
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px){
+    .carousel-item img{
+        height: 600px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally centered */
+    /* justify-content: center; */
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/background/2.png);
+    /* background-size: cover; 
+    background-position: center;  */
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left center;
+
+}
+
+@media (max-width: 768px) {
+    .location-container {
+        background-size: auto 100%;
+        background-position: left center;
+    }
+}
+.location-container h2{
+    margin-top: 80px;
+    font-size: 2.5em;
+    font-family: Cormorant Garamond, sans-serif;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: auto;
+}
+
+.textbox {
+    max-width: 330px;
+    width: 90%;
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'AngellaWhite', sans-serif;
+    font-size: 2em;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textbox:hover {
+    background-color: rgba(195, 138, 168, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.info-box {
+    display: none;
+    align-items: center;
+    max-width: 400px;
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 6px 8px rgba(195, 138, 168, 0.7);
+}
+
+
+
+.info-box a{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.info-box a:hover{
+    color: rgb(165, 122, 122);
+    text-decoration: underline;
+}
+
+.info-box a:active{
+    color: rgb(165, 122, 122);
+    text-decoration: underline;
+}
+
+.info-box p{
+    font-family: Cormorant Garamond, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+.wedding-registry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally centered */
+    /* justify-content: center; */
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/background/3.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .wedding-registry-container {
+        background-size: auto 100%;
+        background-position: right center;
+    }
+}
+
+.wedding-registry-container h2{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-family: Cormorant Garamond, sans-serif;
+    text-align: center;
+}
+
+.wedding-registry-body{
+    text-align: left;
+    max-width: 80%;
+}
+.wedding-registry-body p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Cormorant Garamond, sans-serif;
+}
+
+@media (min-width: 600px) {
+    .wedding-registry-body p{
+        font-size: 1.2em;
+    }
+}
+
+/* Apply even larger font size for screens with a width of 1024px or more */
+@media (min-width: 1024px) {
+    .wedding-registry-body p{
+        font-size: 1.8em;
+    } 
+}
+
+.card2 {
+    font-family: 'AngellaWhite', sans-serif;
+    margin-top: 30px;
+    max-width: 400px;
+    width: 85%;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: rgb(213, 67, 0); */
+    cursor: pointer; 
+}
+
+.card2 h3{
+    text-align: center;
+}
+
+.card2:hover {
+    color: black;
+    text-decoration: none;
+    background-color: rgb(241, 220, 210);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card2:active { /* while clicking on it */
+    color: brown;
+}
+
+@media (min-width: 600px) {
+    .card2 h3{
+        font-size: 1.2em;
+    }
+}
+
+/* Apply even larger font size for screens with a width of 1024px or more */
+@media (min-width: 1024px) {
+    .card2 h3{
+        font-size: 2em;
+    }
+    
+}
+
+
+
+.footer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.footer-text {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* color: #ffffcc; */
+    width: 80vw;
+}
+
+.footer-text h1{
+    margin-top: 20vh;
+    font-family: 'Lulo Clean Outline Bold';
+    color: #fff; /* Set text color to white */
+    text-shadow: 0 0 10px #eead87, 0 0 20px #eead87, 0 0 30px #eead87; /* Add multiple shadows with different blur radii */
+}
+
+/* Styles for laptop screens (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+    .footer-text h1 {
+        font-size: 2em;
+    }
+}
+
+/* Styles for mobile screens (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+    .footer-text h1 {
+        font-size: 1.5em;
+    }
+}

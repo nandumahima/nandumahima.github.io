@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+header {
+    font-weight: bold;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Cormorant Garamond, sans-serif;
+    color: rgba(255,255,255,0.98);
+    font-size: 1.2em;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+      /* solid background */
+    background: rgb(0,212,255);
+  
+  /* gradient background*/
+    background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);  
+  
+    /* photo background */
+    background-image: url(https://images.unsplash.com/photo-1619204715997-1367fe5812f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;  
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.textbox {
+    width: 250px;
+    height: 250px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 130px auto 100px auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 6px rgba(0, 0, 0, 0.171);
+    text-shadow: 0 0 10px #bce0ffdb, 0 0 20px #bce0ffdb, 0 0 30px #bce0ffdb, 0 0 40px #bce0ffdb, 0 0 50px #bce0ffdb; 
+}
+
+.textbox:hover {
+  filter: blur(0.2px);
+  border: 3px solid #ccc;
+  box-shadow: 0 0 6px 9px rgba(0, 0, 0, 0.171);
+}
+
+.textbox:active {
+  filter: blur(0.2px);
+  border: 3px solid #ccc;
+  box-shadow: 0 0 6px 9px rgba(0, 0, 0, 0.171);
+}
+
+.textbox p{
+    font-family: Cormorant Garamond, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    color: rgb(20, 16, 16);
+}
+
+#instruction{
+    width: 80%;
+    margin: auto;
+    font-family: Cormorant Garamond, sans-serif;
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.98);
+}
+
+/* #randomButton {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#instruction {
+    margin-top: 20px;
+} */
+
+.hidden {
+    display: none;
+}
+
+#confirmationModal {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for translucency */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    justify-content: center;
+    align-items: center; 
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  margin: 0 5px;
+  border: none;
+  background-color: #1b89ff; /* Blue color for buttons */
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#giftDetailsBody{
+    width: 95%;
+    max-width: 380px;
+    margin: auto;
+}
+
+
+#giftDetails {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 38px;  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image {
+  position: relative;
+  display: flex;
+  /* background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80); */
+  background-image: url(https://wakefitdev.gumlet.io/img/shoe-racks/ASTRID/1.jpg?w=1700);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255, 0.255);
+  
+}
+
+.overlay-link {
+  flex: 1;
+  /* Optional styling for the overlay */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  /* You can add other styles like opacity, hover effects, etc. */
+}
+
+#giftDetails h1{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(255,255,255,0.98);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+#giftDetails p {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.name-link{
+  text-decoration: none;
+}
+
+.button-wrapper{
+  margin-top: 18px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.outline {
+  background: transparent;
+  color: rgba(0, 212, 255, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+  transition: all .3s ease;
+  
+}
+
+.outline:hover{
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s ease;  
+}
+.outline:active{
+    transform: scale(1.125);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transition: all .3s ease;  
+  }
+
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .3s ease; 
+}
+
+.fill:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;    
+}
+
+.fill:active{
+    transform: scale(1.125);  
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    transition: all .3s ease;    
+}
+
+.rupee-symbol::before {
+  content: "\20B9"; /* Unicode for the rupees symbol */
+  display: inline-block;
+  margin-right: 5px; /* Adjust spacing as needed */
+}
+
+
+#nameModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 350px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for translucency */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it's above the overlay */
+}
+
+.name-modal-content {
+  text-align: center;
+}
+
+#nameInput {
+  width: 80%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  margin: 0 5px;
+  border: none;
+  background-color: #288efb; /* Blue color for button */
+  color: white;
+  cursor: pointer;
+}
+
+#confirmNameButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+#nameInput::input {
+  text-transform: uppercase; /* Convert placeholder text to uppercase */
+}
+
+#thankYouModal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 350px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for translucency */
+  border: 1px solid #494949;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.558); /* Add a subtle shadow */
+  z-index: 1001; /* Ensure it's above the overlay */
+}
+
+.thankyou{
+  font-family: Cormorant Garamond, sans-serif;
+  font-size: 3em;
+  color: rgba(152, 3, 137, 0.944);
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.loveit{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px; 
+}
